@@ -1,0 +1,21 @@
+package com.offcn;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+//或者@EnableEurekaClient
+@EnableFeignClients
+@EnableCircuitBreaker
+public class ConsumerUserFeign2Start {
+    public static void main(String[] args) {
+
+        SpringApplication.run(ConsumerUserFeign2Start.class);
+    }
+
+
+}
